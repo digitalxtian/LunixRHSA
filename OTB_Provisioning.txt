@@ -9,7 +9,7 @@ grep ONBOOT !$
 
 yum update
 
-yum install - y redhat-lsb-core kernel-headers kernel-devel
+yum install - y redhat-lsb-core net-tools epel-release kernel-headers kernel-devel
 
 yum groupinstall -y "Development Tools" 
 
