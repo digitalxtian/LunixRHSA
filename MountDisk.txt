@@ -1,0 +1,3 @@
+sudo mount -r /dev/cdrom /mnt
+cd /mnt
+sudo ./script2run.run
