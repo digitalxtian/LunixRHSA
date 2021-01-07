@@ -6,3 +6,15 @@ sed -i s/ONBOOT=no/ONBOOT=yes /etc/sysconfig/network-scripts/ifcfg-enp0s3
 sed -i s/ONBOOT=no/ONBOOT=yes /etc/sysconfig/network-scripts/ifcfg-enp0s8
 
 grep ONBOOT !$
+
+yum update
+
+yum install - y redhat-lsb-core kernel-headers kernel-devel
+
+yum groupinstall -y "Development Tools" 
+
+[OPTIONAL] yum groupinstall -y "X Window System" "MATE Desktop"
+[OPTIONAL] system set-default graphical.target
+[OPTIONAL] systemctl isolate graphical.target
+
+reboot -- to update kernel
